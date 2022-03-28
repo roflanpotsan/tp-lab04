@@ -1,56 +1,56 @@
 name: lab-04
 on: [push]
 jobs:
-	build:
+ build:
 	runs-on: ubuntu-latest
 	
 	steps:
-		- name: checkout
-		  uses: actions/checkout@v3
+         - name: checkout
+         uses: actions/checkout@v3
 		
-		- name: Get CMake version
-		  run: |
-		  VERSION = 'cmake --version'
-		  echo $VERSION
+	 - name: Get CMake version
+	   run: |
+	     VERSION = 'cmake --version'
+	      echo $VERSION
 
-		- name: build formatter library
-		  run: |
-		  cmake -S ./formatter_lib -B ./formatter_output
-		  cd formatter_output
+	 - name: build formatter library
+	   run: |
+	    cmake -S ./formatter_lib -B ./formatter_output
+	    cd formatter_output
 		  make
 		  cd ..
 		
 		- name: build formatter_ex library
 		  run: |
-		  cmake -S ./formatter_ex_lib -B ./formatter_ex_output
-		  cd formatter_ex_output
-		  make
-		  cd ..
+		   cmake -S ./formatter_ex_lib -B ./formatter_ex_output
+		   cd formatter_ex_output
+		   make
+		   cd ..
 
-                - name: build solver library
-                  run: |
-                  cmake -S ./formatter_lib -B ./formatter_output
-                  cd formatter_output
-                  make
-                  cd ..
+    - name: build solver library
+      run: |
+       cmake -S ./formatter_lib -B ./formatter_output
+       cd formatter_output
+       make
+       cd ..
 
-                - name: build formatter library
-                  run: |
-                  cmake -S ./solver_lib -B ./solver_output
-                  cd solver_output
-                  make
-                  cd ..
+    - name: build formatter library
+      run: |
+       cmake -S ./solver_lib -B ./solver_output
+       cd solver_output
+       make
+       cd ..
 
-                - name: build hello_world application
-                  run: |
-                  cmake -S ./hello_world_application -B ./hello_world_output
-                  cd hello_world_output
-                  make
-                  cd ..
+    - name: build hello_world application
+      run: |
+       cmake -S ./hello_world_application -B ./hello_world_output
+       cd hello_world_output
+       make
+       cd ..
 
-                - name: build solver app
-                  run: |
-                  cmake -S ./solver_application -B ./solver_app_output
-                  cd solver_app_output
-                  make
-                  cd ..
+    - name: build solver app
+      run: |
+       cmake -S ./solver_application -B ./solver_app_output
+       cd solver_app_output
+       make
+       cd ..
