@@ -35,10 +35,12 @@ jobs:
        cmake -S ./hello_world_application -B ./hello_world_output
        cd hello_world_output
        make
+       ./hello_world
        cd ..
     - name: build solver app
       run: |
        cmake -S ./solver_application -B ./solver_app_output
        cd solver_app_output
        make
+       ./solver
        cd ..
