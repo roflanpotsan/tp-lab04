@@ -1,6 +1,0 @@
-/Users/roflanpotsan/roflanpotsan/tp-lab03/formatter_ex_lib/CMakeFiles/formatter_ex.dir
-/Users/roflanpotsan/roflanpotsan/tp-lab03/formatter_ex_lib/CMakeFiles/edit_cache.dir
-/Users/roflanpotsan/roflanpotsan/tp-lab03/formatter_ex_lib/CMakeFiles/rebuild_cache.dir
-/Users/roflanpotsan/roflanpotsan/tp-lab03/formatter_ex_lib/formatter_founder/CMakeFiles/formatter.dir
-/Users/roflanpotsan/roflanpotsan/tp-lab03/formatter_ex_lib/formatter_founder/CMakeFiles/edit_cache.dir
-/Users/roflanpotsan/roflanpotsan/tp-lab03/formatter_ex_lib/formatter_founder/CMakeFiles/rebuild_cache.dir
