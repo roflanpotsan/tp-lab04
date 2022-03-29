@@ -20,12 +20,6 @@ jobs:
        cd ..
     - name: build solver library
       run: |
-       cmake -S ./formatter_lib -B ./formatter_output
-       cd formatter_output
-       make
-       cd ..
-    - name: build formatter library
-      run: |
        cmake -S ./solver_lib -B ./solver_output
        cd solver_output
        make
