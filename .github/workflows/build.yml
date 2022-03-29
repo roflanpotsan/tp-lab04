@@ -1,11 +1,11 @@
 name: lab-04
 on: [push]
 jobs:
- build:
+ build_libs:
   runs-on: ubuntu-latest	
   steps:
     - name: checkout
-      uses: actions/checkout@amogus	
+      uses: actions/checkout@master
     - name: build formatter library
       working-directory: ./formatter_lib
       run: |
@@ -24,6 +24,11 @@ jobs:
        cd solver_output
        make
        cd ..
+ build_hello_world_app:
+   runs-on: ubuntu-latest	
+   steps:
+    - name: checkout
+      uses: actions/checkout@master
     - name: build hello_world application
       run: |
        cmake -S ./hello_world_application -B ./hello_world_output
@@ -31,6 +36,11 @@ jobs:
        make
        ./hello_world
        cd ..
+ build_solver_app:
+   runs-on: ubuntu-latest	
+   steps:
+    - name: checkout
+      uses: actions/checkout@master
     - name: build solver app
       run: |
        cmake -S ./solver_application -B ./solver_app_output
