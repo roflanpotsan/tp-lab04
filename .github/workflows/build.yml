@@ -7,11 +7,11 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3		
     - name: build formatter library
+      working-directory: ./formatter_lib
       run: |
-       cmake -S ./formatter_lib -B ./formatter_output
+       cmake -B ./formatter_output
        cd formatter_output
        make
-       cd ..
     - name: build formatter_ex library
       run: |
        cmake -S ./formatter_ex_lib -B ./formatter_ex_output
