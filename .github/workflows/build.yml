@@ -23,7 +23,6 @@ jobs:
        cmake -S ./solver_lib -B ./solver_output
        cd solver_output
        make
-       cd ..
  build_hello_world_app:
    runs-on: ubuntu-latest	
    steps:
@@ -35,7 +34,6 @@ jobs:
        cd hello_world_output
        make
        ./hello_world
-       cd ..
  build_solver_app:
    runs-on: ubuntu-latest	
    steps:
@@ -47,4 +45,3 @@ jobs:
        cd solver_app_output
        make
        ./solver
-       cd ..
