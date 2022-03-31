@@ -24,6 +24,7 @@ jobs:
        cd solver_output
        make
  build_hello_world_app:
+   needs: build_libs
    runs-on: ubuntu-latest	
    steps:
     - name: checkout
@@ -35,6 +36,7 @@ jobs:
        make
        ./hello_world
  build_solver_app:
+   needs: build_libs
    runs-on: ubuntu-latest	
    steps:
     - name: checkout
